@@ -1,2 +1,8 @@
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+cmake_install.cmake
+config.h
+*.xcodeproj
 _build
-*.xcodebuild
+

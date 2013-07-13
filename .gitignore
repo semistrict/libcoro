@@ -5,4 +5,5 @@ cmake_install.cmake
 config.h
 *.xcodeproj
 _build
-
+*.build
+Debug

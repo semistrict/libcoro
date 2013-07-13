@@ -84,7 +84,7 @@
 #ifndef CORO_H
 #define CORO_H
 
- #include "config.h"
+#include "config.h"
 
 #if __cplusplus
 extern "C" {

@@ -84,6 +84,8 @@
 #ifndef CORO_H
 #define CORO_H
 
+ #include "config.h"
+
 #if __cplusplus
 extern "C" {
 #endif
@@ -299,7 +301,7 @@ void coro_stack_free (struct coro_stack *stack);
     && !defined CORO_SJLJ    && !defined CORO_LINUX \
     && !defined CORO_IRIX    && !defined CORO_ASM \
     && !defined CORO_PTHREAD && !defined CORO_FIBER
-# if defined WINDOWS && (defined __i386 || (__x86_64 || defined _M_IX86 || defined _M_AMD64)
+# if defined WINDOWS && (defined __i386 || (defined __x86_64 || defined _M_IX86 || defined _M_AMD64))
 #  define CORO_ASM 1
 # elif defined WINDOWS || defined _WIN32
 #  define CORO_LOSER 1 /* you don't win with windoze */
@@ -310,7 +312,7 @@ void coro_stack_free (struct coro_stack *stack);
 # elif defined HAVE_SETJMP_H && defined HAVE_SIGALTSTACK
 #  define CORO_SJLJ 1
 # else
-error unknown or unsupported architecture
+#  error unknown or unsupported architecture
 # endif
 #endif
 

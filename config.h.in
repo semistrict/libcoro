@@ -1,0 +1,3 @@
+#cmakedefine HAVE_UCONTEXT_H
+#cmakedefine HAVE_SETJMP_H
+#cmakedefine HAVE_SIGALTSTACK
